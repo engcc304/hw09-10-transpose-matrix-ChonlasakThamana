@@ -35,4 +35,43 @@
             4 10 16
             5 11 17
             6 12 18
-*/
+*/#include <stdio.h>
+
+int main() {
+    int rows, cols;
+
+    // รับข้อมูลจำนวนแถวและคอลัมน์จากผู้ใช้
+    printf("Array element :\n");
+    scanf("%d %d", &rows, &cols);
+
+    // ประกาศอาเรย์เพื่อเก็บข้อมูล
+    int arr[rows][cols];
+
+    // รับข้อมูลจากผู้ใช้
+    printf("Input :\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    // แสดงอาเรย์ต้นฉบับ
+    printf("Array\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+
+    // ทำการ Transpose และแสดงผล
+    printf("Array Transpose\n");
+    for (int j = 0; j < cols; j++) {
+        for (int i = 0; i < rows; i++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
